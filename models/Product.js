@@ -21,13 +21,10 @@ Product.init(
       allowNull: false,
     },
     price:{
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
       validate: {
-        isDecimal: {
-          args: [10, 2],
-          msg: 'Price must be a decimal within two decimal places.'
-        }
+        isDecimal: true
       }
     },
     stock:{
